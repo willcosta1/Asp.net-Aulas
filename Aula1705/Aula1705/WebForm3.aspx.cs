@@ -16,8 +16,8 @@ namespace Aula1705
         {
             if (!IsPostBack)
             {
-                //v1 = 0;
-                //v2 = 0;
+                v1 = 0;
+                v2 = 0;
             }
         }
 
@@ -31,9 +31,14 @@ namespace Aula1705
 
         protected void btnIgual_Click(object sender, EventArgs e)
         {
-            Session.Add("valorv1", double.Parse(txtValor1.Text)); // txtValor1.text
-            Session.Add("valorv2", double.Parse(txtValor2.Text));
-            Response.Redirect("~/WebForm4.aspx");
+            if (!txtValor1.Text.Equals("") && !txtValor2.Text.Equals("")) {
+                Session.Add("valorv1", double.Parse(txtValor1.Text));
+                Session.Add("valorv2", double.Parse(txtValor2.Text));
+                Response.Redirect("~/WebForm4.aspx");
+            }else
+            {
+                //alerta js (campos null)
+            }
         }
     }
 }

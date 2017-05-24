@@ -145,7 +145,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Views\Produtos\" />
   </ItemGroup>
   <ItemGroup>
@@ -225,6 +224,7 @@
     <Content Include="Global.asax" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Views\Categorias\cadastro.aspx" />
     <Content Include="Views\Categorias\Lista.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -257,6 +257,7 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\CategoriaController.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -312,6 +313,13 @@
     </Compile>
     <Compile Include="Views\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Categorias\cadastro.aspx.cs">
+      <DependentUpon>cadastro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Categorias\cadastro.aspx.designer.cs">
+      <DependentUpon>cadastro.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Categorias\Lista.aspx.cs">
       <DependentUpon>Lista.aspx</DependentUpon>

@@ -8,7 +8,7 @@ namespace Aula2405_EF_MODELFIRST.Views
 {
     public class BasePage : System.Web.UI.Page
     {
-        protected BaseDadosContainer contexto = new BaseDadosContainer();
+        //protected BaseDadosContainer contexto = new BaseDadosContainer();
 
     }
 }

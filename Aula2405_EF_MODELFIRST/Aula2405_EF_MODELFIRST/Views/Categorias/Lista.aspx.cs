@@ -1,4 +1,5 @@
-﻿using Aula2405_EF_MODELFIRST.Models;
+﻿using Aula2405_EF_MODELFIRST.Controllers;
+using Aula2405_EF_MODELFIRST.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,14 @@ namespace Aula2405_EF_MODELFIRST.Views.Categorias
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            List<Categoria> categorias = contexto.Categorias.ToList();
+            CategoriaController ctrl = new CategoriaController();
+            List<Categoria> lista = ctrl.Listar();
+
+            gvCategorias.DataSource = lista.OrderBy(c => c.Id);
+            gvCategorias.DataBind();
+
+            gvCategoriasExcluidas.DataSource = ctrl.ListarInativos();
+            gvCategoriasExcluidas.DataBind();
         }
     }
 }

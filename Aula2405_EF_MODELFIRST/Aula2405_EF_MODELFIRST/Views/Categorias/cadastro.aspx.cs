@@ -18,6 +18,7 @@ namespace Aula2405_EF_MODELFIRST.Views.Categorias
 
         protected void salvar_Click(object sender, EventArgs e)
         {
+            /* Primeira aula
             if (!txtDesc.Text.Equals("") && !txtNome.Text.Equals(""))
             {
                 var categoria = new Categoria();
@@ -32,7 +33,8 @@ namespace Aula2405_EF_MODELFIRST.Views.Categorias
                     mensagemErro.Visible = true;
 
                 }
-            }
+            }*/
+
         }
     }
 }

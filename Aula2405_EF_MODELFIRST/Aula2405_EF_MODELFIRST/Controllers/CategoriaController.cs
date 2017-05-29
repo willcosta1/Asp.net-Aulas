@@ -8,7 +8,7 @@ namespace Aula2405_EF_MODELFIRST.Controllers
 {
     public class CategoriaController
     {
-        BaseDadosContainer contextoc = new BaseDadosContainer();
+        /*BaseDadosContainer contextoc = new BaseDadosContainer();
         public static bool add(Categoria C)
         {
             BaseDadosContainer contextoc = new BaseDadosContainer();
@@ -22,9 +22,9 @@ namespace Aula2405_EF_MODELFIRST.Controllers
             {
                 return false;
             }
-        }//Em casa
+        }//Na primeira aula*/
 
-        //Na aula
+        
         protected BaseDadosContainer contexto = new BaseDadosContainer();
 
         public void Adicionar(Categoria categoria)

@@ -14,6 +14,6 @@
 
     <asp:TextBox ID="txtNome" runat="server"></asp:TextBox>
     <asp:TextBox ID="txtDesc" runat="server" TextMode="MultiLine"></asp:TextBox>
-    <asp:Button ID="salvar" runat="server" Text="Salvar" OnClick="salvar_Click" />
+    <asp:Button ID="btnSalvar" runat="server" Text="Salvar" OnClick="btnSalvar_Click1"/> <!--OnClick="salvar_Click"-->
     <asp:Button ID="cancelar" runat="server" Text="Cancelar" />
 </asp:Content>

@@ -15,8 +15,8 @@ namespace Aula2405_EF_MODELFIRST.Views.Categorias
         {
 
         }
-
-        protected void salvar_Click(object sender, EventArgs e)
+        
+        protected void btnSalvar_Click1(object sender, EventArgs e)
         {
             /* Primeira aula
             if (!txtDesc.Text.Equals("") && !txtNome.Text.Equals(""))
@@ -34,6 +34,17 @@ namespace Aula2405_EF_MODELFIRST.Views.Categorias
 
                 }
             }*/
+            Categoria cat = new Categoria();
+            cat.Descricao = txtDesc.Text;
+            cat.Nome = txtNome.Text;
+            cat.Ativo = true;
+
+            /*Com static, lembrando que static fica na memoria(Warning)
+            CategoriaController.Adicionar(cat);
+            
+            */
+            CategoriaController ctrl = new CategoriaController();
+            ctrl.Adicionar(cat);
 
         }
     }

@@ -49,13 +49,13 @@ namespace Aula2405_EF_MODELFIRST.Views.Categorias {
         protected global::System.Web.UI.WebControls.TextBox txtDesc;
         
         /// <summary>
-        /// salvar control.
+        /// btnSalvar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button salvar;
+        protected global::System.Web.UI.WebControls.Button btnSalvar;
         
         /// <summary>
         /// cancelar control.

@@ -16,6 +16,7 @@ namespace Aula0706_MVC.Controllers
 
         public ActionResult About()
         {
+            ViewBag.Nome = "Will";
             ViewBag.Message = "Your application description page.";
 
             return View();

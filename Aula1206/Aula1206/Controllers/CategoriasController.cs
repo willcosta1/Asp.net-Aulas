@@ -14,11 +14,11 @@ namespace Aula1206.Controllers
         {
             List<Categoria> categorias = new List<Categoria>();
 
-            categorias.Add(new Categoria() { Nome = "Carros" });
-            categorias.Add(new Categoria() { Nome = "Motos" });
-            categorias.Add(new Categoria() { Nome = "Barcos" });
-            categorias.Add(new Categoria() { Nome = "Aviões" });
-            categorias.Add(new Categoria() { Nome = "Caminhões" });
+            categorias.Add(new Categoria() { Nome = "Carros", Descricao = "Os carros são como os barcos" });
+            categorias.Add(new Categoria() { Nome = "Motos", Descricao = "As motos são como os jetski" });
+            categorias.Add(new Categoria() { Nome = "Barcos", Descricao = "Os barcos são como os carros" });
+            categorias.Add(new Categoria() { Nome = "Aviões", Descricao = "asfaf" });
+            categorias.Add(new Categoria() { Nome = "Caminhões"});
 
             ViewBag.ListaCategorias = categorias;
 
@@ -29,6 +29,12 @@ namespace Aula1206.Controllers
         public ActionResult Create()
         {
             return View();
+        }
+        [HttpPost]
+        public ActionResult Create(Categoria Categoria)
+        {
+            //Validação
+            return View(Categoria);
         }
     }
 }

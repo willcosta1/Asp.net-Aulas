@@ -5,8 +5,23 @@
 
 <h2>@ViewBag.Title</h2>
 
-@foreach(var cat in Model)
+@foreach (var cat in Model)
 {
-    <b>@cat.Nome</b>
-    <p>@cat.Descricao</p>
+    @*<p class="text-uppercase">
+            <b>@cat.Nome</b>
+        </p>
+        <p>@cat.Descricao</p>*@
+    <dl>
+        <dt>@cat.Nome</dt>
+        @if (!string.IsNullOrEmpty(cat.Descricao))
+        {
+            <dd>@cat.Descricao</dd>
+        }
+        else
+        {
+            <dd>
+                <em style="color:grey">Sem Descrição</em>
+            </dd>
+        }
+    </dl>
 }

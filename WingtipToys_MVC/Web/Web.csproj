@@ -171,9 +171,19 @@
     <Compile Include="Controllers\CategoriasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProdutosController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706191236321_InitialCreate.cs" />
+    <Compile Include="Migrations\201706191236321_InitialCreate.Designer.cs">
+      <DependentUpon>201706191236321_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201706191354140_AdicionandoTabelaProdutos.cs" />
+    <Compile Include="Migrations\201706191354140_AdicionandoTabelaProdutos.Designer.cs">
+      <DependentUpon>201706191354140_AdicionandoTabelaProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -240,6 +250,11 @@
     <Content Include="Views\Categorias\Details.cshtml" />
     <Content Include="Views\Categorias\Edit.cshtml" />
     <Content Include="Views\Categorias\Index.cshtml" />
+    <Content Include="Views\Produtos\Create.cshtml" />
+    <Content Include="Views\Produtos\Delete.cshtml" />
+    <Content Include="Views\Produtos\Details.cshtml" />
+    <Content Include="Views\Produtos\Edit.cshtml" />
+    <Content Include="Views\Produtos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -257,6 +272,14 @@
       <Project>{7ee47c8a-75d5-4fd3-9bab-6e126823ae50}</Project>
       <Name>BaseModels</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201706191236321_InitialCreate.resx">
+      <DependentUpon>201706191236321_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706191354140_AdicionandoTabelaProdutos.resx">
+      <DependentUpon>201706191354140_AdicionandoTabelaProdutos.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -43,10 +43,11 @@ namespace Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CategoriaID,Nome,Descricao,Ativo")] Categoria categoria)
+        public ActionResult Create([Bind(Include = "CategoriaID,Nome,Descricao")] Categoria categoria)
         {
             if (ModelState.IsValid)
             {
+                categoria.Ativo = true;
                 db.Categorias.Add(categoria);
                 db.SaveChanges();
                 return RedirectToAction("Index");
